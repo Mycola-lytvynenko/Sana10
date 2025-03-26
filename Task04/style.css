@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/*Обнуленння*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+:has(:target) {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1.5;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+}
+
+input {
+    outline: none;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li,
+ol li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+:where(fieldset[class]) {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+}
+
+:where(address[class]) {
+    font-style: normal;
+}
+
+button,
+label {
+    cursor: pointer;
+}
+
+svg * {
+    transition-property: fill, stroke;
+}
+
+/* del all animatiaon if people don`t use it*/
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/*----------------*/
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: #000;
+    background-color: rgba(99, 99, 97, 0.2431372549);
+}
+
+.wrapper {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3607843137);
+    flex-direction: column;
+    min-height: 100vh;
+
+    align-items: center;
+    padding-left: calc(15px + 25 * calc(100vw - (320px)) / 1120);
+    padding-right: calc(15px + 25 * calc(100vw - (320px)) / 1120);
+}
+.main__container {
+    padding: 25px;
+}
+.main__container p {
+    margin-bottom: 35px;
+}
+.table {
+    margin-bottom: 20px;
+}
+table {
+    border-collapse: collapse;
+}
+table td {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+}
+.selected {
+    background-color: yellow;
+}
